@@ -1,6 +1,13 @@
 toggle_navigation: 'Navigasi'
+form:
+    are_you_sure: 'Apakah Anda yakin akan mengabaikan perubahan?'
 show:
     page_title: 'Tampilkan'
+search:
+    page_title: 'Pencarian'
+    no_results: 'Tidak ada data yang ditampilkan'
+edit:
+    page_title: 'Edit'
 delete_modal:
     action: 'Hapus'
     title: 'Peringatan'

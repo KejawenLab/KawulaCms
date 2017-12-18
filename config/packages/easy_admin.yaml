@@ -33,6 +33,8 @@ easy_admin:
             templates:
                 edit: 'user/edit.html.twig'
                 list: 'user/list.html.twig'
+            search:
+                title: 'user.title.search'
             edit:
                 title: 'user.title.change_password'
             form:

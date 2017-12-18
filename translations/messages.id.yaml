@@ -9,6 +9,7 @@ action:
     edit: 'Ubah'
     cancel: 'Batal'
     list: 'Kembali ke list'
+    save: 'Simpan'
 menu:
     label:
         administrator: 'Administrator'
@@ -17,7 +18,12 @@ user:
     title:
         list: 'Pengguna'
         show: 'Detil pengguna'
+        change_password: 'Ubah password'
+        search: 'Pencarian pengguna'
     label:
         fullname: 'Nama lengkap'
         username: 'Nama pengguna'
         role: 'Hak akses'
+        change_password: 'Ubah password'
+    help:
+        unique_password: 'Password harus unik dan susah ditebak'

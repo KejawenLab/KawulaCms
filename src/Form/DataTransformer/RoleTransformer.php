@@ -30,7 +30,7 @@ class RoleTransformer implements DataTransformerInterface
      *
      * @return array
      */
-    public function reverseTransform($roles)
+    public function reverseTransform($roles): array
     {
         return [$roles];
     }

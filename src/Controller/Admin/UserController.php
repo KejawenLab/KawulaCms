@@ -18,7 +18,7 @@ class UserController extends AdminController
 
     public function __construct(RoleTransformer $transformer)
     {
-        $this->transformer;
+        $this->transformer = $transformer;
     }
 
     /**
@@ -30,7 +30,7 @@ class UserController extends AdminController
     protected function createEntityFormBuilder($entity, $view)
     {
         $builder = parent::createEntityFormBuilder($entity, $view);
-        $builder->addModelTransformer($this->transformer);
+        $builder->get('roles')->addModelTransformer($this->transformer);
 
         return $builder;
     }
