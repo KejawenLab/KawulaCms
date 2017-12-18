@@ -1,0 +1,68 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^7.1.3",
+        "ext-apcu": "*",
+        "javiereguiluz/easyadmin-bundle": "^1.17",
+        "ramsey/uuid": "^3.7",
+        "symfony/asset": "^4.0",
+        "symfony/console": "^4.0",
+        "symfony/dotenv": "^4.0",
+        "symfony/flex": "^1.0",
+        "symfony/framework-bundle": "^4.0",
+        "symfony/lts": "^4@dev",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/orm-pack": "^1.0",
+        "symfony/profiler-pack": "^1.0",
+        "symfony/security-bundle": "^4.0",
+        "symfony/web-server-bundle": "^4.0",
+        "symfony/webpack-encore-pack": "^1.0",
+        "symfony/yaml": "^4.0"
+    },
+    "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
+        "doctrine/doctrine-migrations-bundle": "^1.3",
+        "phpstan/phpstan": "^0.9.1",
+        "phpunit/phpunit": "^6.5"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "classmap-authoritative": true,
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "KejawenLab\\Application\\KawulaCms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KejawenLab\\Application\\KawulaCms\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "id": "01C146JJQCTJZ8VAX32QYY5CEX",
+            "allow-contrib": true
+        }
+    }
+}

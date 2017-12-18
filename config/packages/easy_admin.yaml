@@ -1,0 +1,55 @@
+easy_admin:
+    site_name: '%kawula_cms.title%'
+    formats:
+        date:     'd-m-Y'
+        time:     'H:i:s'
+        datetime: 'd-m-Y H:i:s'
+    list:
+        max_results: 17
+        actions:
+            - { name: 'show', icon: 'search', label: false, title: 'action.show' }
+            - { name: 'new', icon: 'plus-circle', css_class: 'btn btn-primary action-new', label: false, title: 'action.new' }
+            - { name: 'edit', icon: 'pencil', label: false, title: 'action.edit' }
+            - { name: 'delete', icon: 'close', label: false, title: 'action.delete' }
+    design:
+        brand_color: '#ac2925'
+        form_theme: 'vertical'
+        templates:
+            layout: 'default/layout.html.twig'
+            menu: 'default/menu.html.twig'
+            list: 'default/list.html.twig'
+        menu:
+            - label: 'menu.label.administrator'
+              role: 'ROLE_SUPER_ADMIN'
+              icon: 'shield'
+              children:
+                  - { entity: 'User', label: 'menu.label.user', icon: 'hand-o-right' }
+    entities:
+        User:
+            role: 'ROLE_SUPER_ADMIN'
+            class: 'KejawenLab\Application\KawulaCms\Entity\User'
+            controller: 'KejawenLab\Application\KawulaCms\Controller\Admin\UserController'
+            disabled_actions: ['new', 'delete']
+            templates:
+                edit: 'user/edit.html.twig'
+                list: 'user/list.html.twig'
+            edit:
+                title: 'user.title.change_password'
+            form:
+                fields:
+                    - { type: 'group', label: false, css_class: 'col-sm-12' }
+                    - { property: 'password', type: 'password', help: 'user.help.unique_password', label: 'user.label.change_password' }
+                    - { property: 'roles', label: 'user.label.role', type: 'choice', type_options: { attr: { class: 'static-select' }, choices: { 'USER': 'ROLE_USER', 'SUPER ADMINISTATOR': 'ROLE_SUPER_ADMIN' } } }
+            show:
+                title: 'user.title.show'
+                fields:
+                    - { property: 'fullName', label: 'user.label.fullname' }
+                    - { property: 'username', label: 'user.label.username' }
+                    - { property: 'roles', label: 'user.label.role', template: 'default/field_array.html.twig' }
+            list:
+                role: 'ROLE_SUPER_ADMIN'
+                title: 'user.title.list'
+                fields:
+                    - { property: 'fullName', label: 'user.label.fullname' }
+                    - { property: 'username', label: 'user.label.username' }
+                    - { property: 'roles', label: 'user.label.role' }

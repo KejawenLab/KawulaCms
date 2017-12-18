@@ -1,0 +1,8 @@
+easy_admin_bundle:
+    resource: '@EasyAdminBundle/Controller/AdminController.php'
+    type: annotation
+    prefix: /{_locale}/admin
+    requirements:
+        _locale: '%kawula_cms.locales%'
+    defaults:
+        _locale: '%locale%'

@@ -1,0 +1,23 @@
+User: 'Pengguna'
+kawula_cms:
+    auth:
+        failed: 'Nama pengguna atau Kata sandi salah'
+        action: 'Masuk'
+action:
+    search: 'Cari'
+    show: 'Tampilkan'
+    edit: 'Ubah'
+    cancel: 'Batal'
+    list: 'Kembali ke list'
+menu:
+    label:
+        administrator: 'Administrator'
+        user: 'Pengguna'
+user:
+    title:
+        list: 'Pengguna'
+        show: 'Detil pengguna'
+    label:
+        fullname: 'Nama lengkap'
+        username: 'Nama pengguna'
+        role: 'Hak akses'

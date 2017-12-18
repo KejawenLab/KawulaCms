@@ -1,0 +1,14 @@
+toggle_navigation: 'Navigasi'
+show:
+    page_title: 'Tampilkan'
+delete_modal:
+    action: 'Hapus'
+    title: 'Peringatan'
+    content: 'Apakah Anda yakin akan menghapus data ini?'
+list:
+    page_title: 'List'
+    row_actions: 'Pilihan'
+user:
+    logged_in_as: 'Masuk sebagai'
+    unnamed: 'Tanpa nama'
+    signout: 'Keluar'

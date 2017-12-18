@@ -1,0 +1,8 @@
+twig:
+    paths: ['%kernel.project_dir%/templates']
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    globals:
+        title: '%kawula_cms.title%'
+        locale: '%locale%'
+        default_role: 'ROLE_USER'
